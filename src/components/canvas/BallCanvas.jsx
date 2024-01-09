@@ -1,8 +1,8 @@
 import { Canvas} from '@react-three/fiber'
 import { Decal, Float, OrbitControls, Preload, useTexture } from '@react-three/drei'
 import { View } from '@react-three/drei'
-import { useMemo, useRef, createRef } from 'react'
-import { OrthographicCamera } from '@react-three/drei'
+import {useRef} from 'react'
+
 
 
 
