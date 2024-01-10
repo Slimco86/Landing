@@ -11,7 +11,6 @@ const SectionWrapper = (Component,idName) => function HOC(){
         key = {idName}
         viewport={{once:true,amount:0.2}}
         className={styles.padding+' max-w-10xl mx-auto relative z-auto'}>
-            
             <Component/>
         </motion.section>
     )

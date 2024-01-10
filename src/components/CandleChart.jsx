@@ -18,8 +18,7 @@ const CandlestickChart = ({ticker,index}) => {
                                 { data: result.data},
                                 
                             ], 
-                    options: { chart: 
-                                { type: 'candlestick', },
+                    options: { chart: { type: 'candlestick', },
                                title: {
                                    text: result.title,
                                    align: 'top',
@@ -31,23 +30,41 @@ const CandlestickChart = ({ticker,index}) => {
                                      fontSize:  '24px',
                                      fontWeight:  'bold',
                                      fontFamily:  undefined,
-                                     color:  '#263238'
+                                     color:  '#ccfff2'
                                    },
                                },
 
+                               xaxis:{tickAmount:20,
+                                      labels:{
+                                        style:{
+                                            colors:"#ccfff2",
+                                            }
+                                        }
+                                    },
                                 
-                             }, 
-                  }; 
+                                yaxis:{tickAmount:10,
+                                    decimalsInFloat:2,
+                                    labels:{
+                                      style:{
+                                          colors:"#ccfff2"
+                                          }
+                                      }
+                                  }
+                                
+                                }, 
+                    }; 
     return ( 
-            <Chart options={state.options} series={state.series} type="candlestick" width={700} /> 
+            <Chart options={state.options} series={state.series} type="candlestick" width={"100%"} height={"100%"} /> 
         ); 
         }
         
 const ChartPallete = () =>{
     return(
-        <div className='flex flex-wrap backdrop-blur-sm bg-black/40 shadow-red-800/70 shadow-lg ring-2 ring-white/5 p-8 rounded-2xl'> 
+        <div className='my-10 flex flex-wrap w-full justify-between items-center h-full gap-5 backdrop-blur-sm bg-black/40 shadow-red-800/70 shadow-lg ring-2 ring-white/5 p-8 rounded-2xl'> 
             {tickers.map((t,index) => (
-                <CandlestickChart ticker = {t} index = {index} key = {t+" chart"}/>
+                <div className='w-[45%] h-[500px]'>
+                    <CandlestickChart ticker = {t} index = {index} key = {t+" chart"}/>
+                </div>
             ) )}
         </div>
     )
