@@ -53,23 +53,14 @@ const MultiBallCanvas = ({icons}) =>{
   console.log(views)
   return (
     <>
-      <div 
-      style={{
-        position: "relative",
-        width: "100%",
-        height: "200px",
-        display: "grid",
-        gridTemplateColumns: "1fr 1fr 1fr 1fr",
-        gap: "1rem",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
+      <div id='first-div'
+      className='relative w-full flex justify-center align-center flex-wrap gap-4'
       >
       {views.map((view,index)=>(
-        <div ref={view} key ={"viewcont"+index} style={{width:"100%", height: "100%"}}/>
+        <div id='second-div' ref={view} key ={"viewcont"+index} className='flex w-[150px] h-[150px]'/>
       ))}
       </div>
-      <Canvas gl={{preserveDrawingBuffer: false,  }} 
+      <Canvas id='Canvas' gl={{preserveDrawingBuffer: false,  }} 
               eventSource={document.getElementById('root')}
               //className=' mix-blend-overlay'
               style={{

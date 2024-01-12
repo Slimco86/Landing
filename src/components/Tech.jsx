@@ -23,18 +23,18 @@ import { frameworks, languages } from '../constants'
 const Tech = () => {
   const icons = languages.map((l)=>(l.icon))
   return (
-    <div className='flex flex-row flex-wrap justify-center gap-10'>
+    <>
       <MultiBallCanvas key = {"languages"} icons={icons}/>
-    </div>
+    </>
     
   )
 }
 export const Frameworks = () => {
   const icons = frameworks.map((l)=>(l.icon))
   return (
-    <div className='flex flex-row flex-wrap justify-center gap-10'>
+    <>
       <MultiBallCanvas key = {"frameworks"} icons={icons}/>
-    </div>
+    </>
     
   )
 }

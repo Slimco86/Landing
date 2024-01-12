@@ -81,15 +81,15 @@ const About = () => {
         </Suspense> 
       </motion.div>
 
-      <motion.div className="mt-10 overflow-ellipsis" variants={textVariant()}>
+      <motion.div className="mt-10" variants={textVariant()}>
         <div className="flex text-center">
           <Card title="Frameworks" fact_text={framework_text}/>
         </div>
         <Suspense>
-          <Frameworks/>
+            <Frameworks/>
         </Suspense> 
       </motion.div>
-      
+     
       </>
     )
 }
